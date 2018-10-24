@@ -21,3 +21,8 @@ Route::get('/users/{id}', function($id) {
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
+
+// because we use ::resource, this will create all the CRUD routes
+// index, store, create, show, update, destroy, edit
+// can show route list with `php artisan route:list`
+Route::resource('posts', 'PostsController');
