@@ -28,3 +28,7 @@ Route::get('/services', 'PagesController@services');
 // in this PostsController
 // can show route list with `php artisan route:list`
 Route::resource('posts', 'PostsController');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
