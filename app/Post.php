@@ -7,9 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     // // change Table name
-    // protected $table = 'posts';
+    protected $table = 'posts';
     // // change Primary key
-    // public $primaryKey = 'id';
+    public $primaryKey = 'id';
     // // change Timestamps
-    // public $timestamps = true;
+    public $timestamps = true;
+
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 }
